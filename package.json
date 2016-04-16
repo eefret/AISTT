@@ -19,13 +19,19 @@
     "Tool"
   ],
   "author": "Christopher T. Herrera(eefretsoul@gmail.com), Cristian Gomez(cjgm23@gmail.com)",
-  "license": "N/A",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/eefret/AISTT/issues"
   },
   "homepage": "https://github.com/eefret/AISTT",
   "devDependencies": {
-    "electron-prebuilt": "^0.37.0"
+    "electron-prebuilt": "^0.37.0",
+    "angular": "^1.5.3",
+    "bootstrap": "^3.3.6",
+    "grunt": "^1.0.0",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-contrib-nodeunit": "~1.0.0",
+    "grunt-contrib-uglify": "~1.0.1"
   }
 
 }
