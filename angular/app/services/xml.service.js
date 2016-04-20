@@ -1,12 +1,20 @@
+var X2JS = require('x2js');
+var fs = require('fs');
+
 angular
     .module('app')
-    .service('xml', xml);
+    .service('$xml', $xml);
 
-function xml() {
+function $xml($q) {
     return {
-        toJSON: function (xml) {
-            var x2js = new x2js();
-            return x2js.xml2js(xml);
+        toJSON: function (path) {
+            var deferred = $q.defer();
+            fs.readFile(path, 'utf8', function (err, data) {
+                if (err) throw err;
+                var x2js = new X2JS();
+                deferred.$$resolve(x2js.xml2js(data));
+            });
+            return deferred.promise;
         }
     }
 }

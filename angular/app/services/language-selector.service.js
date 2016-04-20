@@ -28,7 +28,7 @@ function languageSelector($http, $filter, $q) {
                         }
                         var language = $filter('filter')(languagesData.languages, {code:languageCodePrefix})[0]
                         if (language) {
-                            languages.push({'name':language.name, 'code':languageCode, 'country': country, fileName: translationsRoot+file+'/strings/.xml'});
+                            languages.push({'name':language.name, 'code':languageCode, 'country': country, fileName: translationsRoot+file+'/strings.xml'});
                         }
                     }
                 });
