@@ -5,7 +5,8 @@ angular
 function xml() {
     return {
         toJSON: function (xml) {
-            return 'Testing'
+            var x2js = new x2js();
+            return x2js.xml2js(xml);
         }
     }
 }

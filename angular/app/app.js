@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app', ['ngRoute', 'LocalStorageModule', 'ui.bootstrap'])
+        .module('app', ['ngRoute', 'LocalStorageModule'])
         .config(routeConfig)
         .config(localStorageConfig);
 

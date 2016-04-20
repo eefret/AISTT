@@ -36,6 +36,7 @@
   "dependencies": {
     "angular-local-storage": "^0.2.7",
     "angular-route": "^1.5.5",
-    "jquery": "^2.2.3"
+    "jquery": "^2.2.3",
+    "x2js": "^2.0.1"
   }
 }
