@@ -26,12 +26,16 @@
   "homepage": "https://github.com/eefret/AISTT",
   "devDependencies": {
     "electron-prebuilt": "^0.37.0",
-    "angular": "^1.5.3",
+    "angular": "^1.5.5",
     "bootstrap": "^3.3.6",
     "grunt": "^1.0.0",
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-contrib-nodeunit": "~1.0.0",
     "grunt-contrib-uglify": "~1.0.1"
+  },
+  "dependencies": {
+    "angular-local-storage": "^0.2.7",
+    "angular-route": "^1.5.5",
+    "jquery": "^2.2.3"
   }
-
 }
