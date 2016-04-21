@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="alert alert-warning alert-dismissible" role="alert" ng-repeat="alert in vm.alerts">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>{{alert.type}}</strong> {{alert.message}}
+</div>
+    <h2 class="text-center">Select your Project location and Languages:</h2>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Project Path</label>
+            <input type="file" webkitdirectory id="file-chooser" ng-model-instant
+                   onchange="angular.element(this).scope().vm.fileChange(this)" class="hidden">
+            <div class="col-sm-7">
+                <input type="text" class="form-control" ng-model="vm.projectPath">
+            </div>
+            <button class="btn btn-primary" file-input>...</button>
+        </div>
+    </form>
+
+    <div>
+        <select multiple class="form-control" ng-model="vm.selectedLanguages" ng-change="vm.onLanguagesSelected(this)">
+            <option ng-repeat="language in vm.languages" value="{{language}}">{{language.name}}
+                {{language.country ? '|': ''}} {{language.country}} {{language.code ? '|': ''}} {{language.code}}
+
+            </option>
+        </select>
+    </div>
+</div>
+<div class="container-fluid footer" id="footer">
+    <div class="pull-left">
+        <button class="btn btn-default btn-lg" ng-click="vm.onPrevious()">Previous</button>
+    </div>
+    <div class="pull-right">
+        <button class="btn btn-primary btn-lg" ng-click="vm.onFinish()">Finish</button>
+    </div>
+</div>
