@@ -12,6 +12,12 @@
     function routeConfig($routeProvider) {
         $routeProvider
             .when('/', {
+                title: 'Project Type',
+                templateUrl: 'app/setup/project-type.html',
+                controller: 'ProjectTypeController',
+                controllerAs: 'vm'
+            })
+            .when('/location', {
                 title: 'Location Select',
                 templateUrl: 'app/setup/location-selector.html',
                 controller: 'LocationSelectorController',
