@@ -52,4 +52,3 @@ function LocationSelectorController($scope, languageSelector, localStorageServic
         vm.projectPathChanged(null);
     }, true);
 }
-// LocationSelectorController.$inject = ['language-selector', 'localStorageService'];
