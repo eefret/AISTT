@@ -9,7 +9,7 @@ function LocationSelectorController($scope, languageSelector, localStorageServic
     vm.selectedLanguages = [];
     vm.isValidProjectPath = false;
     vm.alerts = [];
-    vm.translationsRoot = '/app/src/main/res/'
+    vm.translationsRoot = '/app/src/main/res/';
 
     vm.projectPathChanged = function (file) {
         vm.isValidProjectPath = false;
