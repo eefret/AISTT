@@ -5,9 +5,9 @@ const electron = require('electron');
  */
 angular
     .module('app')
-    .controller('ProjectTypeController', ['$location', 'growl',  LocationSelectorController]);
+    .controller('ProjectTypeController', ['$location',  ProjectTypeController]);
 
-function LocationSelectorController($location) {
+function ProjectTypeController($location) {
     var vm = this;
     var types = [
         {'name': 'Android', 'logo': 'app/content/img/android-logo.jpg', 'alt': 'Android Project'},
