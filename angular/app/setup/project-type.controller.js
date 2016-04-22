@@ -9,27 +9,31 @@ angular
 
 function ProjectTypeController($location) {
     var vm = this;
-    var types = [
-        {'name': 'Android', 'logo': 'app/content/img/android-logo.jpg', 'alt': 'Android Project'},
-        {'name': 'Ios', 'logo': 'app/content/img/ios-logo.jpg', 'alt': 'IOS Project'}];
-    let  selectedType;
+    vm.types = [
+        {'name': 'Android', 'logo': 'content/img/android-logo.jpg', 'alt': 'Android Project'},
+        {'name': 'Ios', 'logo': 'content/img/ios_logo.jpg', 'alt': 'IOS Project'}];
+    vm.selectedType = false;
+    vm.alerts = [];
 
     vm.setType = function(type){
         if(type.name == 'Ios'){
-            //TODO give message
+            vm.alerts.push({'type': 'Error', message: 'Still not available Coming Soon!.'});
             return;
         }
-        selectedType = type;
+        vm.selectedType = type;
+        vm.alerts.push({'type': 'Success', message: type.name + ' selected.'});
     };
 
     vm.onPrevious = function () {
-        //TODO say goodbye
+        vm.alerts.push({'type': 'Info', message: 'Good Bye!'});
         electron.app.quit();
     };
     vm.onNext = function () {
-        if(selectedType){
-            $location.path('/main');
+        if(!selectedType){
+            vm.alerts.push({'type': 'Error', message: 'You have to select a type.'});
+            return;
         }
+        $location.path('/main');
     };
 
 }
