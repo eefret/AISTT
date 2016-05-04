@@ -1,5 +1,20 @@
-{{vm.selectedLanguages |json }}
+<!--{{vm.selectedLanguages |json }}-->
 
-<button ng-click="vm.onBack()">Back</button>
+<!--<button ng-click="vm.onBack()">Back</button>-->
 
-{{vm.sampleLanguageJson}}
+<!--{{vm.sampleLanguageJson}}-->
+
+<!-- wrap tabset in a div with scrolling-tabs-wrapper directive on it -->
+
+<div class="container-fluid">
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+
+    <div class="row">
+
+        <div id="grid1" ui-grid="vm.gridOptions" class="grid"></div>
+ </div>
+</div>

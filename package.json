@@ -34,9 +34,12 @@
     "grunt-contrib-uglify": "~1.0.1"
   },
   "dependencies": {
+    "angular-bootstrap-scrolling-tabs": "0.0.24",
     "angular-local-storage": "^0.2.7",
     "angular-route": "^1.5.5",
+    "angular-ui-grid": "^3.1.1",
     "jquery": "^2.2.3",
+    "jquery.1": "^1.0.0",
     "x2js": "^2.0.1"
   }
 }
